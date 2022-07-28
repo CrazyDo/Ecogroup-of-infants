@@ -5,7 +5,6 @@
 library(SpiecEasi)
 library(FactoMineR)
 library(factoextra)
-library(pheatmap)
 
 eco <- function(x, f_taxa_col, l_taxa_col, method=c("RA","SparCC")) {
   if (dir.exists("Data_sets/")==FALSE) {
@@ -83,13 +82,13 @@ eco <- function(x, f_taxa_col, l_taxa_col, method=c("RA","SparCC")) {
   
   eco.pca <- PCA(re1, graph = FALSE,ncp = 5)
   var <- get_pca_var(eco.pca)
-  cc <- as.data.frame(var$contrib) ##查看各变量对于各主成分的贡献
+  cc <- as.data.frame(var$contrib) ## the contribution of variables on each principal components
   cc1 <- cc[order(cc$Dim.1, decreasing = TRUE),]
   cc1$sum <- cumsum(cc1$Dim.1)
   dd <- cc1[which(cc1$sum<20),]
   eco_group <- rownames(dd)
   
-  eig.val <- get_eigenvalue(eco.pca)  ## 选取特征值大于1的主成分数
+  eig.val <- get_eigenvalue(eco.pca) 
   
   result <- list()
   result$cov <- re1
