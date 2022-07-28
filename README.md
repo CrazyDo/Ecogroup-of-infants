@@ -2,4 +2,4 @@
 
 ****
 ### How to reference?       
-If you have used this script in your research, please use the following link for references to our script: https://github.com/CrazyDo/PMN  
+If you have used this script in your research, please use the following link for references to our script: https://github.com/CrazyDo/Ecogroup-of-infants
