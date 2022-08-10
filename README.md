@@ -5,7 +5,7 @@
 ```
 source("eco.R")
 ```
-##### Prepare the input data (raw counts), the row is sample, the column is taxa, the variable for timepoints must be 'tp'
+##### Prepare the input data (relative abundance), the row is sample, the column is taxa, the variable for timepoints must be 'tp'
 ```
 res <- eco(data , f_taxa_col, l_taxa_col, method = "RA")
 ```
