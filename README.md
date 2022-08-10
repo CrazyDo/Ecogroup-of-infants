@@ -4,11 +4,14 @@
 ### How to use the function of eco?
 ```
 source("eco.R")
+```
 # prepare the input data, the row is sample, the column is taxa, the variable for timepoints must be 'tp'
+```
 res <- eco(data , f_taxa_col, l_taxa_col, method = "RA")
+```
 # f_taxa_col: number of the most left column of the taxa matrix; l_taxa_col: number of the most right column of the taxa matrix
+```
 res$eco.taxa   # the ecotaxa
-
 ```
 
 ****
